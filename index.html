@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Book library</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <header>
+            <h3 class="muted">Book Library</h3>
+        </header>
+        <div id="content">
+
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/template" id="tpl-book-list-item">
+        <h4><%= title %></h4>
+        <p><a class="btn" href="#books/<%= id %>">View details &raquo;</a></p>
+    </script>
+
+    <script type="text/template" id="tpl-book-details">
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <td><%= id %></td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td><%= title %></td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td><%= author %></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><%= description %></td>
+            </tr>
+        </table>
+
+        <p><a class="btn" href="#">&laquo; Go back</a></p>
+    </script>
+
+    <!-- JavaScript -->
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="js/models/book.js"></script>
+    <script src="js/views/bookList.js"></script>
+    <script src="js/views/bookListItem.js"></script>
+    <script src="js/views/bookDetails.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
